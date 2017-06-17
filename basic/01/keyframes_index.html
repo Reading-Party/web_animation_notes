@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Intro to CSS Animations</title>
+    <style>
+        body {
+          padding: 50px;
+        }
+
+        #container {
+          padding: 20px;
+          width: 100%;
+          height: 250px; background-color: #EEE; text-align: center;
+        }
+
+        /*设置动画属性*/
+        #hexagon {
+          animation: bobble 2s infinite;
+        }
+        /*定义关键帧*/
+        @keyframes bobble {
+          /* 0% 代表动画的开始 */
+          0%{
+            /*
+               transform ： 旋转元素
+               translateY ： 仅垂直方向移动
+            */
+            transform: translateY(10px);
+          }
+          /* 50% 代表动画的中间  */
+          50% {
+            transform: translateY(40px);
+          }
+          /* 100% 代表动画的结束 */
+          100% {
+            transform: translateY(10px);
+          }
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <img id="hexagon" src="https://www.kirupa.com/images/hexagon.svg"/>
+    </div>
+  </body>
+</html>
